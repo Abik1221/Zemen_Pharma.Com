@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	r := gin.Defeault()
+	r := gin.Default()
 
 	port := os.Getenv("PORT")
 
@@ -15,7 +15,7 @@ func main() {
 		port = "8080"
 	}
 
-	r.Get("/", func(c *gin.Context) {
+	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "this is the first APi",
 		})
